@@ -1,0 +1,39 @@
+{
+  "name": "photography",
+  "version": "5.0.0",
+  "description": "A jekyll website for photographer cum developer",
+  "main": "npmfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "gulp sass",
+    "theme": "node scripts/generate-theme-vars.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rampatra/photography.git"
+  },
+  "keywords": [
+    "photography",
+    "jekyll",
+    "website",
+    "template",
+    "website template",
+    "portfolio",
+    "portfolio website"
+  ],
+  "author": "Ram Patra",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rampatra/photography/issues"
+  },
+  "homepage": "https://github.com/rampatra/photography#readme",
+  "devDependencies": {
+    "del": "^8.0.0",
+    "gulp": "^5.0.0",
+    "gulp-filter": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.0"
+  }
+}

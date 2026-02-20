@@ -1,0 +1,94 @@
+# Exclude dev/build files from _site (extends Jekyll defaults)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - package.json
+  - package-lock.json
+  - gulpfile.mjs
+  - npmfile.js
+  - nginx.conf.example
+  - "*.sh"
+  - "*.py"
+  - resize-images.js
+  - scripts
+  - CNAME
+  - README.md
+  - LICENSE
+
+# Base configs
+# baseurl: path prefix when the site is served from a subdirectory (not the root).
+#   Use "" when the site lives at the root (e.g. chronomoments.com).
+#   Use "/my-project" when the site lives at a subpath (e.g. example.com/my-project).
+#   Example: GitHub project pages use baseurl: "/repo-name" for username.github.io/repo-name
+baseurl: ""
+url: "https://yourdomain.com"
+image_full_loc: "/images/full"
+image_thumbs_loc: "/images/thumbs"
+image_sort_by: "name"      # "name" or "date" (date = file modification time)
+image_sort_order: "descending"  # "ascending" or "descending"
+google_analytics: ""
+
+# Theme (colors & fonts) - customize the UI appearance
+# Omit any key to keep the default. Re-run build (gulp sass or npm run build) after changes.
+# Note: Uses "custom_theme" to avoid conflicting with Jekyll's reserved "theme" (gem-based themes).
+custom_theme:
+  # Font family for body text (CSS font stack). Use quotes for font names with spaces.
+  font_family: "'Source Sans Pro', Helvetica, sans-serif"
+  # Fixed-width font for code blocks
+  font_family_fixed: "'Courier New', monospace"
+  # Google Fonts URL - load the font(s) matching font_family. Set empty to skip.
+  font_google_url: "https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+  # Color palette (hex values)
+  colors:
+    background: "#242629"             # Main page background
+    background_secondary: "#1f2224"   # Header, panels
+    text: "#a0a0a1"                   # Body text
+    text_heading: "#ffffff"            # Headings, bold text
+    text_muted: "#707071"             # Secondary text
+    text_subtle: "#505051"             # Hints, labels
+    border: "#36383c"                 # Borders and dividers
+    field_background: "#34363b"        # Form inputs, code blocks
+    field_background_highlight: "#44464b"  # Inputs when hovered/focused
+    accent: "#34a58e"                 # Links, buttons, highlights
+
+# UI configs
+title: "Your Website Name"
+subtitle: "A subtitle"
+author: "Your Name"
+header:
+ title: "Your Website Name"
+ subtitle: ""
+ show_about: true
+ # Optional: single social link in header nav (omit or leave empty to hide)
+ social:
+   name: "Instagram"
+   url: "https://instagram.com/youraccount"
+   icon: "icon brands fa-instagram"
+
+footer:
+  name: "Name on the footer"
+  description: "A description for the footer"  # Optional: shown below the name if set
+  contact_email: "contact@yourdomain.com"  # Recipient for mailto link
+
+# Social media metadata
+description: "A photography portfolio showcasing moments in time"
+
+socials:
+  - name: "Instagram"
+    url: "https://instagram.com/youraccount"
+    icon: "icon brands fa-instagram"
+  - name: "GitHub"
+    url: "https://github.com/youraccount"
+    icon: "icon brands fa-github"
+  - name: "Twitter"
+    url: "https://twitter.com/youraccount"
+    icon: "icon brands fa-twitter"
+  # - name: "LinkedIn"
+  #   url: "https://linkedin.com/"
+  #   icon: "icon brands fa-linkedin"
+
+# Configure which exif data to display
+# Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
+exif: '[{"tag": "Model", "icon": "fa fa-camera-retro"}, {"tag": "FNumber", "icon": "far fa-dot-circle"}, {"tag": "ExposureTime", "icon": "far fa-clock"}, {"tag": "ISOSpeedRatings", "icon": "fa fa-info-circle"}, {"tag": "DateTimeOriginal", "icon": "far fa-calendar"}]'
