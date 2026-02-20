@@ -278,3 +278,9 @@ Want your own icon in the browser tab? Use [favicon.io](https://favicon.io): pic
 - **404 on all pages:** (1) Ensure `root` in nginx config points to the actual `_site` directory (e.g. `/var/www/photography-portfolio`). (2) Symlink `_site` to `/var/www/` so `www-data` can read it—files in `/home/username/` often block nginx. (3) Run `chmod 755` on the path so www-data can traverse to `_site`.
 - **404 on subpages only:** nginx `try_files` should include `$uri.html` for Jekyll pretty URLs.
 - **Blank CSS:** Run `npx gulp sass` before `jekyll build`.
+
+---
+
+## Credits
+
+This project is based on [rampatra/photography](https://github.com/rampatra/photography), a free Jekyll portfolio for photographers. I took it and improved it for my own use.
